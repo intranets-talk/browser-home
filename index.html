@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>gab</title>
+
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- <script type="text/javascript">
+
+		function startClock() {
+			var now = new Date();
+			var hor = now.getHours() < 10 ? '0' + now.getHours() : now.getHours();
+			var min = now.getMinutes() < 10 ? '0' + now.getMinutes() : now.getMinutes();
+			document.getElementById('liveClock').innerHTML = hor + '<span>:</span>' + min;
+			// : inside span to select it in the css to make it blink
+			var reWrite = setTimeout(startClock, 1000);
+		}
+
+	</script> -->
+
+</head>
+
+<!-- <body onload="startClock()"> -->
+<body>
+	<div id="blackout"></div>
+	<span id="escape">[ESC] To Return</span>
+
+	<div id="grid">
+
+		<table>
+
+			<tr>
+				<td>
+					<a href="https://facebook.com" id="1" class="lBox">
+						<h3>facebook</h3>
+					</a>
+				</td>
+				<td>
+					<a href="https://news.ycombinator.com/" id="2" class="lBox">
+						<h3>hacker news</h3>
+					</a>
+				</td>
+				<td>
+					<a href="https://amazon.co.uk/" id="3" class="lBox">
+						<h3>amazon</h3>
+					</a>
+				</td>
+				<td>
+					<a href="https://notes.noterbox.com" id="4" class="lBox">
+						<h3>noterbox</h3>
+					</a>
+				</td>
+			</tr>
+
+
+			<tr>
+				<td>
+					<a href="https://ebay.co.uk" id="5" class="lBox">
+						<h3>ebay</h3>
+					</a>
+				</td>
+				<td>
+					<a href="https://photos.google.com/?pageId=none" id="6" class="lBox">
+						<h3>google photos</h3>
+					</a>
+				</td>
+				<td>
+					<a href="https://mail.google.com/mail" id="7" class="lBox">
+						<h3>gmail</h3>
+					</a>
+				</td>
+				<td>
+					<a href="https://www.google.co.uk/" id="8" class="lBox">
+						<h3>google</h3>
+					</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<a href="https://youtube.com" id="9" class="lBox">
+						<h3>youtube</h3>
+					</a>
+				</td>
+				<td>
+					<a href="https://calendar.google.com/calendar" id="10" class="lBox">
+						<h3>google cal</h3>
+					</a>
+				</td>
+				<td>
+					<a href="https://play.google.com/store?hl=en&tab=c8" id="11" class="lBox">
+						<h3>google play</h3>
+					</a>
+				</td>
+				<td>
+					<a href="https://www.google.co.uk/maps?hl=en&tab=8l" id="12" class="lBox">
+						<h3>google maps</h3>
+					</a>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+
+	<footer>
+
+		<form action="https://duckduckgo.com/" method="get">
+			<input type="text" name="q" placeholder="[Space] to search" id="search" autocomplete="off">
+		</form>
+
+		<!-- <div id="liveClock"></div> -->
+
+	</footer>
+
+</body>
+<script type="text/javascript" src="keys.js"></script>
+</html>

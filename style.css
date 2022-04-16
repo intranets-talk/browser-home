@@ -1,0 +1,152 @@
+
+:root {
+	--background-alt: #26221F;
+	--background: #211D1B;
+	--base-txt: #4D6358;
+}
+::-webkit-input-placeholder {
+    opacity: 1 !important;
+}
+::-moz-placeholder {
+    opacity: 1 !important;
+}
+body, html {
+	font-family: 'Open Sans Condensed', sans-serif;
+	background-color: var(--background);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	overflow: hidden;
+	margin: 0;
+}
+kbd {
+	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #577064 inset;
+	-moz-box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #577064 inset;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #577064 inset;
+	text-shadow: 0 1px 0 #577064;
+	-webkit-border-radius: 3px;
+	background-color: #4D6358;
+	border: 1px solid #658274;
+	-moz-border-radius: 3px;
+	font-family: monospace;
+	display: inline-block;
+	border-radius: 3px;
+	padding: .1em .6em;
+	line-height: 1.4;
+	font-size: 11px;
+	margin: 0 .1em;
+	color: #ccc;
+}
+
+div#blackout {
+	transition: .4s opacity;
+	background-color: #000;
+	pointer-events: none;
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	z-index: 2;
+	opacity: 0;
+	margin: 0;
+}
+span#escape {
+	transition: .4s opacity;
+	pointer-events: none;
+	position: absolute;
+	text-align: center;
+	font-weight: bold;
+	font-size: 70px;
+	color: #60B48A;
+	z-index: 10;
+	width: 100%;
+	top: 130px;
+	opacity: 0;
+}
+div#grid {
+	margin-left: -540px;
+	margin-top: 138px;
+	position: fixed;
+	width: 1140px;
+	height: 380px;
+	left: 50%;
+}
+div#grid table {
+	border-collapse: separate;
+	border-spacing: 12px;
+	font-size: 22px;
+}
+div#grid table tr td {
+	height: 100px;
+	width: 250px;
+}
+div#grid table tr td a {
+	text-shadow: 0px 0px 0 rgba(200,50,50,.5), 0px 0px 0 rgba(50,200,150,.5);
+	box-shadow: 0px 0px 0 rgba(200,50,50,.5), 0px 0px 0 rgba(50,200,150,.5);
+	transition: .2s text-shadow, .2s box-shadow, .2s border-bottom;
+	border-bottom: 0px solid rgba(200,50,50,1);
+	background-color: var(--background-alt);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	color: #999;
+	box-sizing: border-box;
+	text-decoration: none;
+	position: relative;
+	display: block;
+	padding-left: 24px;
+	padding-top: 12px;
+	height: 100%;
+	width: 100%;
+}
+div#grid table tr td a p {
+	margin-left: 5px;
+	margin-top: 40px;
+}
+div#grid table tr td a img {
+
+	transition: .1s -webkit-filter, .1s filter;
+	position: absolute;
+	opacity: .3;
+	right: 15px;
+	z-index: 0;
+	top: 15px;
+}
+div#grid table tr td a:focus img, div#grid table tr td a:hover img {
+
+}
+div#grid table tr td a:focus {
+
+}
+div#grid table tr td a:focus, div#grid table tr td a:hover {
+
+	box-shadow: 3px 3px 0 rgba(200,50,50,.5), -3px -3px 0 rgba(50,200,150,.5);
+	outline: 0;
+}
+footer form input[type="text"] {
+	transition: .3s border-color, .3s background-color, .3s border-bottom;
+	background-color: var(--background);
+	border-color: var(--base-txt);
+	border: 0; /*   rip ramp   */
+	border-bottom: 5px solid;
+	color: var(--base-txt);
+	font-size: 70px;
+	position: fixed;
+	display: block;
+	outline: none;
+	padding: 10px;
+	z-index: 4;
+	top: 20px;
+	width: 90%;
+	left: 4%;
+}
+footer form input[type="text"]:focus {
+	background-color: var(--background-alt);
+	border-bottom: 10px solid #60B48A;
+	color: #60B48A;
+	outline: none;
+}
+footer form input[type="text"]:focus::-webkit-input-placeholder {
+	opacity: 0;
+}
+footer form input[type="text"]:focus::-moz-placeholder {
+	opacity: 0;
+}
